@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        
+body{
+
+    background: linear-gradient(to right,  #232347, #14232c, black );
+
+
+
+
+}
+        #calculator {
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+            border: 0;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        input[type="text"] {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 8px;
+            font-size: 16px;
+        }
+
+        button {
+            width: 48px;
+            height: 48px;
+            margin: 2px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 50%;
+            border: 1px solid rgb(0, 0, 0);
+        }
+
+        button.operator {
+            background-color: #8c4ef0;
+        }
+
+        button.equal {
+            background-color: #0e1bd1;
+        }
+
+        .clear {
+            background-color: #f7120a;
+            border: 0;
+            width: 25%;
+
+        }
+        .container{
+          background: radial-gradient( #000000, #27130b, #0288d6 );
+
+        }
+      #calculator:hover{
+border: 0;
+background: radial-gradient( #7b4bec, rgb(13, 17, 17), #0288d6 );;
+box-shadow: 10px white;
+font-size: 30px;
+      }
+      .button:hover{
+background: radial-gradient(rgb(14, 189, 14),rgb(6, 6, 184),rgb(243, 22, 22));
+
+      }
+
+      
+    </style>
+</head>
+<body>
+  <br><br>
+  <h1 class="text text-warning text-center" style="font-family: 'Courier New', Courier, monospace;">
+ <b>  Calculator</b>
+  </h1>
+  <br>
+    <div class="container" id="calculator">
+        <input type="text" id="display" readonly>
+        <div>
+            <button onclick="appendToDisplay('7')">7</button>
+            <button onclick="appendToDisplay('8')">8</button>
+            <button onclick="appendToDisplay('9')">9</button>
+            <button class="operator" onclick="appendToDisplay('/')">/</button>
+        </div>
+        <div>
+            <button onclick="appendToDisplay('4')">4</button>
+            <button onclick="appendToDisplay('5')">5</button>
+            <button onclick="appendToDisplay('6')">6</button>
+            <button class="operator" onclick="appendToDisplay('*')">*</button>
+        </div>
+        <div>
+            <button onclick="appendToDisplay('1')">1</button>
+            <button onclick="appendToDisplay('2')">2</button>
+            <button onclick="appendToDisplay('3')">3</button>
+            <button class="operator" onclick="appendToDisplay('-')">-</button>
+        </div>
+        <div>
+            <button onclick="appendToDisplay('0')">0</button>
+            <button onclick="appendToDisplay('.')">.</button>
+            <button class="equal" onclick="calculate()">=</button>
+            <button class="operator" onclick="appendToDisplay('+')">+</button>
+        </div>
+        <div>
+            
+            <button class="clear" onclick="clearDisplay()"> <h3><b>C </b></h3></button>
+        </div>
+    </div>
+<script src="calculator.js"></script>
+</body>
+</html>
